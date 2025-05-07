@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: black;
+    width: 100%;
+}
+
+/* nav config */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    /* Better for spacing */
+    padding: 1rem;
+    margin: 0;
+    margin-top: 50px;
+}
+
+/* MAIN & ASIDE CONTENT */
+nav a {
+    /* White text */
+    color: white;
+    text-decoration: none;
+}
+
+/* Main content config */
+main {
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    /* Main content 75%, aside 25% */
+    min-height: 250px;
+}
+
+/* Main content area */
+.main-content {
+    background-color: lightgray;
+    padding: 1rem;
+}
+
+/* Aside content area */
+.aside-content {
+    background-color: white;
+    padding: 1rem;
+}
+
+/* H3 WORDS // WILL NOT BE BOLD */
+h3 {
+    text-align: left;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+/* HEADER */
+header {
+    text-align: left;
+    color: white;
+    background-color: #383838;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 0;
+    color: white;
+    background-color: #383838;
+}
+
+footer p {
+    padding: 25px;
+}
