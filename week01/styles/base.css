@@ -1,0 +1,182 @@
+/* Base styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #222;
+}
+
+header {
+    background-color: #0a4c74;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 6rem;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 960px;
+    margin: 1.5rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    background-color: #0a4c74;
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 0.8rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.text {
+    flex: 1;
+    margin: auto;
+}
+
+.profile-img {
+    width: 130px;
+    height: 9rem;
+    margin: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.flag-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.flag-img {
+    width: 170px;
+    height: 6rem;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.flag-text {
+    margin: auto;
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+    color: #333;
+}
+
+.location-title {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+}
+
+.location-container {
+    border-bottom: 1px solid #ccc;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+.card-content.left .text ul {
+    margin-top: 6rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.card-content.left .text ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    background-color: #0a4c74;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    color: #FFC030;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0.2rem 0;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-img,
+    .flag-img {
+        width: 130px;
+        height: auto;
+        margin-top: 1rem;
+    }
+}
