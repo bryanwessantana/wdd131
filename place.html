@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WDD 131 - Dynamic Web Fundamentals - Bryan Wesley Santana</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Bryan Santana. Web development fundamentals including HTML, CSS, JavaScript, layout techniques, and accessibility.">
+    <meta name="author" content="Bryan">
+    <link rel="stylesheet" href="styles/place.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet" />
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Finland</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/Finland-hero-large.webp" media="(min-width: 768px)">
+                <source srcset="images/Finland-hero-small.webp" media="(max-width: 767px)">
+                <img src="images/Finland-hero-large.webp" alt="Scenic view of Finland" loading="lazy">
+            </picture>
+
+            <div class="info-card data">
+                <h2>Data</h2>
+                <ul>
+                    <li><strong>Area:</strong> 338,455 sq km</li>
+                    <li><strong>Population:</strong> 5,540,720</li>
+                    <li><strong>Capital:</strong> Helsinki</li>
+                    <li><strong>Languages:</strong> Finnish, Swedish</li>
+                    <li><strong>Currency:</strong> Euro (EUR)</li>
+                    <li><strong>Time Zone:</strong> UTC+2</li>
+                    <li><strong>Calling Code:</strong> +358</li>
+                    <li><strong>Internet TLD:</strong> .fi</li>
+                </ul>
+            </div>
+
+            <div class="info-card weather">
+                <h2>Weather <span class="weather-icon-mobile">⛅</span></h2>
+                <p><strong>Temperature:</strong> <span id="temperature">5</span>°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="windSpeed">10</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windChill">Calculating...</span></p>
+                <div class="weather-icon-mobile">
+                    <img src="images/sun-behind-large-cloud.svg" alt="Partly cloudy icon" class="weather-image" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> &bull; Bryan Wesley Santana &bull; Brazil</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
