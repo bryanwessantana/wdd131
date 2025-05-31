@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temple Album</title>
+    <meta name="author" content="Bryan Santana" />
+    <meta name="description"
+        content="Design, develop, test, and then deploy a temple album page using your own selections of temple pictures." />
+    <link rel="stylesheet" href="styles/filtered-temples.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav>
+            <button data-filter="home">Home</button>
+            <button data-filter="old">Old</button>
+            <button data-filter="new">New</button>
+            <button data-filter="large">Large</button>
+            <button data-filter="small">Small</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+        <section id="temple-container" class="gallery"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Bryan Wesley Santana | All rights reserved</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temple.js" defer></script>
+</body>
+
+</html>
