@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lazy Load Demonstration</title>
+    <meta name="author" content="Bryan W. Santana">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>Picture Album Demo</h1>
+        </header>
+
+        <section class="gallery">
+            <figure>
+                <img src="images\figure01.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 01</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images\figure02.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 02</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images\figure03.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 03</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images\figure04.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 04</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images\figure05.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 05</figcaption>
+            </figure>
+            <figure>
+                <img data-src="images\figure06.jpg" alt="Placeholder Kitten Image" loading="lazy" width="400" height="600">
+                <figcaption>Figure 06</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span>| Bryan Wesley Santana | Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
