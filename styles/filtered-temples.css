@@ -1,7 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     background-color: #fff;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -24,17 +24,16 @@ nav {
     gap: 0.5rem;
 }
 
-button {
+nav a {
     padding: 8px 16px;
-    cursor: pointer;
-    border: none;
-    background-color: #eee;
+    text-decoration: none;
     color: #000;
     font-weight: bold;
+    background-color: #eee;
     border-radius: 5px;
 }
 
-button:hover {
+nav a.active {
     background-color: #ccc;
 }
 
@@ -57,7 +56,7 @@ h1 {
 }
 
 .temple-card {
-    background-color: #f9f9f9;
+    background-color: #f1f0f0;
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 16px;

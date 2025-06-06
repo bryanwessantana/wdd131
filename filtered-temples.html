@@ -2,51 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temple Album</title>
     <meta name="author" content="Bryan Santana" />
     <meta name="description"
-        content="Temple Album: A personal gallery featuring photos of various temples, categorized by size and age." />
+        content="Temple Album: A curated personal gallery showcasing photographs of temples from around the world, thoughtfully categorized by their size and historical era. Explore the architectural beauty and cultural significance of each temple through visually organized collections." />
     <link rel="stylesheet" href="styles/filtered-temples.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
 </head>
 
 <body>
     <header>
         <p class="site-title">Temple Album</p>
         <nav>
-            <button data-filter="home">Home</button>
-            <button data-filter="old">Old</button>
-            <button data-filter="new">New</button>
-            <button data-filter="large">Large</button>
-            <button data-filter="small">Small</button>
+            <a href="#" data-filter="home">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
         </nav>
     </header>
 
     <main>
         <h1>Temple Album</h1>
-        <section id="temple-container" class="gallery">
-            <div class="temple-card">
-                <img src="images/temple1.jpg" alt="Temple 1">
-                <p>Temple 1 - Location</p>
-            </div>
-            <div class="temple-card">
-                <img src="images/temple2.jpg" alt="Temple 2">
-                <p>Temple 2 - Location</p>
-            </div>
-            <div class="temple-card">
-                <img src="images/temple3.jpg" alt="Temple 3">
-                <p>Temple 3 - Location</p>
-            </div>
-            <div class="temple-card">
-                <img src="images/temple4.jpg" alt="Temple 4">
-                <p>Temple 4 - Location</p>
-            </div>
-            <div class="temple-card">
-                <img src="images/temple5.jpg" alt="Temple 5">
-                <p>Temple 5 - Location</p>
-            </div>
-        </section>
+        <section id="temple-container" class="gallery"></section>
     </main>
 
     <footer>

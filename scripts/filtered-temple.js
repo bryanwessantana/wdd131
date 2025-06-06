@@ -22,12 +22,12 @@ function displayTemples(filteredTemples) {
         const card = document.createElement("div");
         card.className = "temple-card";
         card.innerHTML = `
-      <h2>${temple.templeName}</h2>
-      <p><strong>Location:</strong> ${temple.location}</p>
-      <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-      <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
-    `;
+            <h2>${temple.templeName}</h2>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+        `;
         container.appendChild(card);
     });
 }
@@ -53,11 +53,21 @@ function filterTemples(type) {
     displayTemples(filtered);
 }
 
-document.querySelectorAll("button").forEach(btn => {
-    btn.addEventListener("click", () => {
-        const filter = btn.getAttribute("data-filter");
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        // Remove classe 'active' de todos
+        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+
+        // Adiciona 'active' no atual
+        link.classList.add("active");
+
+        const filter = link.getAttribute("data-filter");
         filterTemples(filter);
     });
 });
 
+// Exibe todos inicialmente e marca 'Home' como ativo
 displayTemples(temples);
+document.querySelector("nav a[data-filter='home']").classList.add("active");
