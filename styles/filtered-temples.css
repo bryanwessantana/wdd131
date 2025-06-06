@@ -14,6 +14,11 @@ header {
     flex-wrap: wrap;
 }
 
+.site-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 nav {
     display: flex;
     gap: 0.5rem;
@@ -82,7 +87,7 @@ footer {
         gap: 0.25rem;
     }
 
-    h1 {
+    .site-title {
         font-size: 1.5rem;
     }
 

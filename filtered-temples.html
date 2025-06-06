@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Temple Album</title>
     <meta name="author" content="Bryan Santana" />
     <meta name="description"
-        content="Design, develop, test, and then deploy a temple album page using your own selections of temple pictures." />
+        content="Temple Album: A personal gallery featuring photos of various temples, categorized by size and age." />
     <link rel="stylesheet" href="styles/filtered-temples.css" />
 </head>
 
 <body>
     <header>
-        <h1>Temple Album</h1>
+        <p class="site-title">Temple Album</p>
         <nav>
             <button data-filter="home">Home</button>
             <button data-filter="old">Old</button>
@@ -24,8 +24,29 @@
     </header>
 
     <main>
-        <h1>Home</h1>
-        <section id="temple-container" class="gallery"></section>
+        <h1>Temple Album</h1>
+        <section id="temple-container" class="gallery">
+            <div class="temple-card">
+                <img src="images/temple1.jpg" alt="Temple 1">
+                <p>Temple 1 - Location</p>
+            </div>
+            <div class="temple-card">
+                <img src="images/temple2.jpg" alt="Temple 2">
+                <p>Temple 2 - Location</p>
+            </div>
+            <div class="temple-card">
+                <img src="images/temple3.jpg" alt="Temple 3">
+                <p>Temple 3 - Location</p>
+            </div>
+            <div class="temple-card">
+                <img src="images/temple4.jpg" alt="Temple 4">
+                <p>Temple 4 - Location</p>
+            </div>
+            <div class="temple-card">
+                <img src="images/temple5.jpg" alt="Temple 5">
+                <p>Temple 5 - Location</p>
+            </div>
+        </section>
     </main>
 
     <footer>
