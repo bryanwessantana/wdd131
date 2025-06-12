@@ -1,89 +1,170 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses | Lyrics Idiomas</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses</title>
+    <link rel="icon" href="images/logo-lyrics.png" type="image/x-icon">
     <link rel="stylesheet" href="styles/lyrics.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
-<body>
-    <header data-aos="fade-down">
-        <div class="logo">
-            <a href="lyrics-idiomas.html">
-                <img src="images/lyrics-idiomas.png" alt="Lyrics Idiomas Logo" class="logo-img" />
-            </a>
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="lyrics-idiomas.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="enrollment.html">Enrollment</a></li>
-                <li><a class="btn-nav" href="https://wa.me/41998671970" target="_blank" rel="noopener">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <body>
+        <header data-aos="fade-down">
+            <div class="logo">
+                <a href="lyrics-idiomas.html">
+                    <img src="images/lyrics-idiomas.png" alt="Lyrics Idiomas Logo" class="logo-img" />
+                </a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="lyrics-idiomas.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="enrollment.html">Enrollment</a></li>
+                    <li><a class="btn-nav" href="https://wa.me/41998671970" target="_blank" rel="noopener">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="page-title">
-            <h1>Explore Our Courses</h1>
-            <p>Find the right level for your language learning journey.</p>
-        </section>
+        <main>
+            <div class="exploring-courses">
+                <section class="page-title">
+                    <h1>Explore Our Courses</h1>
+                    <p>Choose a language and find the right level for your learning journey.</p>
+                </section>
 
-        <section class="course-list">
-            <div class="course-card" data-level="beginner">
-                <h2>Beginner</h2>
-                <p>Perfect for those starting from scratch. Learn the basics of communication.</p>
+                <section class="language-selector">
+                    <label for="languageSelect">Select a language:</label>
+                    <select id="languageSelect">
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="portuguese">Portuguese</option>
+                    </select>
+                </section>
             </div>
-            <div class="course-card" data-level="intermediate">
-                <h2>Intermediate</h2>
-                <p>Enhance your skills and start engaging in deeper conversations.</p>
-            </div>
-            <div class="course-card" data-level="advanced">
-                <h2>Advanced</h2>
-                <p>Master the language and speak with fluency and confidence.</p>
-            </div>
-        </section>
-    </main>
 
-    <footer class="footer" data-aos="fade-up">
-        <div class="footer-container">
-            <div class="footer-left" data-aos="fade-right">
-                <img src="images/lyrics-idiomas.png" alt="Logo" />
+            <section class="course-selection">
+                <!-- English Courses -->
+                <div class="language-group" id="english">
+                    <h2>English Courses</h2>
+                    <div class="course-category">
+                        <h3>General English</h3>
+                        <div class="course-card">
+                            <h4>Beginner</h4>
+                            <p>Build a solid foundation.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Intermediate</h4>
+                            <p>Improve vocabulary and grammar.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Advanced</h4>
+                            <p>Achieve fluency in complex topics.</p>
+                        </div>
+                    </div>
+                    <div class="course-category">
+                        <h3>TOEFL & IELTS Preparation</h3>
+                        <div class="course-card">
+                            <h4>TOEFL Prep</h4>
+                            <p>Reading, Listening, Speaking, Writing training.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>IELTS Prep</h4>
+                            <p>Academic and general test strategies.</p>
+                        </div>
+                    </div>
+                    <div class="course-category">
+                        <h3>English for Kids</h3>
+                        <div class="course-card">
+                            <h4>Fun & Interactive</h4>
+                            <p>Songs, games, and stories.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Communication Skills</h4>
+                            <p>Boost speaking and vocabulary.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spanish Courses -->
+                <div class="language-group" id="spanish">
+                    <h2>Spanish Courses</h2>
+                    <div class="course-category">
+                        <h3>General Spanish</h3>
+                        <div class="course-card">
+                            <h4>Beginner</h4>
+                            <p>Learn everyday expressions.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Intermediate</h4>
+                            <p>Engage in basic conversations.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Advanced</h4>
+                            <p>Discuss complex ideas fluently.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portuguese Courses -->
+                <div class="language-group" id="portuguese">
+                    <h2>Portuguese Courses</h2>
+                    <div class="course-category">
+                        <h3>General Portuguese</h3>
+                        <div class="course-card">
+                            <h4>Beginner</h4>
+                            <p>Start with greetings and basics.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Intermediate</h4>
+                            <p>Conversation and grammar practice.</p>
+                        </div>
+                        <div class="course-card">
+                            <h4>Advanced</h4>
+                            <p>Fluent communication in all contexts.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" data-aos="fade-up">
+            <div class="footer-container">
+                <div class="footer-left" data-aos="fade-right">
+                    <a href="lyrics-idiomas.html">
+                        <img src="images/lyrics-idiomas.png" alt="Lyrics Idiomas Logo" class="logo-img" />
+                    </a>
+                </div>
+        
+                <div class="footer-center" data-aos="zoom-in">
+                    <p>© <span id="currentyear"></span> Lyrics Idiomas • All rights reserved
+                        <br><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+                    </p>
+                </div>
             </div>
-    
-            <div class="footer-center" data-aos="zoom-in">
-                <p>© <span id="currentyear"></span> Lyrics Idiomas &bull; All rights reserved</p>
-                <p><a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
-            </div>
-    
-            <div class="footer-right" data-aos="fade-left">
-                <a href="https://br.linkedin.com/in/lyrics-english-school-30bb98238?trk=public_profile_browsemap"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/lyrics_idiomas/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.facebook.com/lyricseducacao/"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@lyricsidiomas8791"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="scripts/lyrics.js"></script>
-    
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            once: true,
-            easing: 'ease-in-out',
-        });
-    </script>
-    
-    <a href="https://wa.me/41998671970" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</body>
+        </footer>
+        
+        <!-- Scripts -->
+        <script src="scripts/lyrics.js"></script>
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 800,
+                once: true,
+                easing: 'ease-in-out',
+            });
+        </script>
+        
+        <!-- WhatsApp button -->
+        <a href="https://wa.me/41998671970" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </body>
 
 </html>

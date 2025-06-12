@@ -8,7 +8,7 @@ body {
 }
 
 a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 /* Header */
@@ -65,7 +65,6 @@ header {
     font-weight: bold;
 }
 
-/* Underline on hover */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -85,8 +84,8 @@ header {
 .hero {
     position: relative;
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: flex-start;
+    justify-content: flex-start;
     height: 80vh;
     text-align: left;
     padding: 2rem;
@@ -118,7 +117,6 @@ header {
 
 .hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
     margin-bottom: 4rem;
     font-family: 'Montserrat', sans-serif;
 }
@@ -217,35 +215,80 @@ header {
     color: white;
 }
 
+
 /* Translation Section */
-.translation-service {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    padding: 3rem 2rem;
+.translation {
+  padding: 3rem 2rem;
+  background-color: #f3f3f3;
+}
+
+.translation-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .translation-text {
-    flex: 1 1 300px;
+  flex: 1 1 400px;
+}
+
+.translation-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.translation-text p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.translation-img {
+  flex: 1 1 400px;
 }
 
 .translation-img img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 10px;
 }
 
-/* Kids Language Section */
-.kids-language {
-    background: #f3f3f3;
-    padding: 3rem 2rem;
-    text-align: center;
+/* Kids Section */
+.kids-section {
+  padding: 3rem 2rem;
+  background-color: #fff4f4;
 }
 
-.kids-language p {
-    max-width: 700px;
-    margin: 1rem auto;
+.kids-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kids-img {
+  flex: 1 1 400px;
+}
+
+.kids-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.kids-text {
+  flex: 1 1 400px;
+}
+
+.kids-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.kids-text p {
+  color: #333;
 }
 
 /* Courses Highlight Section */
@@ -260,8 +303,22 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    margin-top: auto;
     color: white;
+}
+
+.courses-highlight a {
+    color: #000;
+}
+
+.courses-highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s;
 }
 
 .course-buttons {
@@ -333,6 +390,167 @@ header {
     color: white;
 }
 
+/* Courses */
+
+.language-selector {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.language-selector select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.language-group {
+    display: none;
+}
+
+.language-group p {
+    color: black;
+    font-weight: bold;
+}
+
+.language-group h4 {
+    color: black;
+    font-weight: bold;
+}
+
+.language-group.active {
+    display: block;
+}
+
+.course-category {
+    margin: 2rem 0;
+}
+
+.course-card {
+    background: #f0f0f0;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-left: 5px solid #ff0000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Exploring Courses Section */
+.exploring-courses {
+    background: #d9d9d9;
+    padding: 3rem 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Title Section */
+.exploring-courses .page-title h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.exploring-courses .page-title p {
+    font-size: 1.1rem;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 2rem;
+}
+
+/* Language Selector Section */
+.language-selector label {
+    display: block;
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.language-selector select {
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-selector select:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.2);
+    outline: none;
+}
+
+/* Enrollment Form */
+.enroll-form h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d21c30;
+    text-align: center;
+}
+
+form {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    margin-bottom: 1.5rem;
+    border: 1.8px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #d21c30;
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button.btn-primary {
+    display: block;
+    width: 100%;
+    background-color: #d21c30;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover,
+button.btn-primary:focus {
+    background-color: #a11722;
+}
+
 /* Footer */
 .footer {
     background-color: #f3f3f3;
@@ -366,6 +584,7 @@ header {
     margin: 0.5rem 0;
     color: #555;
     font-size: 0.9rem;
+    text-align: center;
 }
 
 .footer-center a {
@@ -433,7 +652,7 @@ header {
         padding: 2rem 4rem;
     }
 
-    .footer-content {
+    .footer-container {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
