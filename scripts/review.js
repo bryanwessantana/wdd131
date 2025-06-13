@@ -55,12 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } else if (isThankYouPage) {
 
-        const perfEntries = performance.getEntriesByType("navigation");
-        if (perfEntries.length > 0 && perfEntries[0].type === "reload") {
-            window.location.href = "form.html";
-            return;
-        }
-
         const reviewCount = localStorage.getItem("reviewCount") || 0;
         const reviewCountSpan = document.getElementById("reviewCount");
         if (reviewCountSpan) {
