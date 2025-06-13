@@ -1,25 +1,80 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    let reviewCount = localStorage.getItem("reviewCount");
+    const isFormPage = !!document.querySelector("form");
+    const isThankYouPage = !!document.getElementById("reviewCount") && !isFormPage;
 
-    reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+    if (isFormPage) {
 
-    localStorage.setItem("reviewCount", reviewCount);
+        const products = [
+            { id: "prod1", name: "Smartphone X200" },
+            { id: "prod2", name: "Noise-Canceling Headphones" },
+            { id: "prod3", name: "4K Ultra HD Monitor" },
+            { id: "prod4", name: "Wireless Keyboard" },
+            { id: "prod5", name: "Ergonomic Office Chair" }
+        ];
 
-    const display = document.getElementById("reviewCount");
-    if (display) {
-        display.textContent = reviewCount;
-    }
+        const productSelect = document.getElementById("productName");
+        const reviewCountDisplay = document.getElementById("reviewCount");
+        const form = document.querySelector("form");
 
-    const yearSpan = document.getElementById("currentyear");
-    const lastModified = document.getElementById("lastModified");
+        if (productSelect) {
+            products.forEach(product => {
+                const option = document.createElement("option");
+                option.value = product.id;
+                option.textContent = product.name;
+                productSelect.appendChild(option);
+            });
+        }
 
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+        let reviewCount = localStorage.getItem("reviewCount");
+        reviewCount = reviewCount ? parseInt(reviewCount) : 0;
 
-    if (lastModified) {
-        lastModified.textContent = `Last Modification: ${document.lastModified}`;
+        if (reviewCountDisplay) {
+            reviewCountDisplay.textContent = reviewCount;
+        }
+
+        if (form) {
+            form.addEventListener("submit", () => {
+                reviewCount++;
+                localStorage.setItem("reviewCount", reviewCount);
+                if (reviewCountDisplay) {
+                    reviewCountDisplay.textContent = reviewCount;
+                }
+            });
+        }
+
+        const yearSpan = document.getElementById("currentyear");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        const lastModified = document.getElementById("lastModified");
+        if (lastModified) {
+            lastModified.textContent = `Last Modification: ${document.lastModified}`;
+        }
+
+    } else if (isThankYouPage) {
+
+        const perfEntries = performance.getEntriesByType("navigation");
+        if (perfEntries.length > 0 && perfEntries[0].type === "reload") {
+            window.location.href = "form.html";
+            return;
+        }
+
+        const reviewCount = localStorage.getItem("reviewCount") || 0;
+        const reviewCountSpan = document.getElementById("reviewCount");
+        if (reviewCountSpan) {
+            reviewCountSpan.textContent = reviewCount;
+        }
+
+        const yearSpan = document.getElementById("currentyear");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        const lastModified = document.getElementById("lastModified");
+        if (lastModified) {
+            lastModified.textContent = `Last Modification: ${document.lastModified}`;
+        }
     }
 });
-  
