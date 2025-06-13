@@ -53,11 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
         showLanguage(select.value);
     });
 
-    // Default display
     showLanguage("english");
 });
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', () => {
     const footerRight = document.createElement('div');
     footerRight.className = 'footer-right';

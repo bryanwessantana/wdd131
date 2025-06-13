@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <!-- Header -->
+
         <header data-aos="fade-down">
             <div class="logo">
                 <a href="lyrics-idiomas.html">
@@ -24,7 +24,7 @@
             </div>
 
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="lyrics-idiomas.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="enrollment.html">Enrollment</a></li>
@@ -34,7 +34,7 @@
         </header>
 
         <main>
-            <!-- Hero -->
+
             <section class="hero" data-aos="fade-up">
                 <div class="hero-bg">
                     <img src="images/studying.webp" alt="Students studying languages" loading="lazy" width="400"
@@ -47,7 +47,6 @@
                 </div>
             </section>
 
-            <!-- Partners -->
             <section class="partners" data-aos="fade-up">
                 <h2>Our Partners</h2>
                 <div class="partner-logos">
@@ -62,7 +61,6 @@
                 </div>  
             </section>
 
-            <!-- Reading & Conversation Clubs -->
             <section class="clubs" data-aos="fade-up">
                 <h2>Reading & Conversation Clubs</h2>
                 <div class="club-content">
@@ -85,7 +83,6 @@
                 <a class="btn-white" href="clubs.html">Learn more about the clubs</a>
             </section>
 
-            <!-- Translation Section -->
             <section class="translation" data-aos="fade-up">
                 <div class="translation-container">
                     <div class="translation-text">
@@ -102,7 +99,6 @@
                 </div>
             </section>
             
-            <!-- Kids Section -->
             <section class="kids-section" data-aos="fade-up">
                 <div class="kids-container">
                     <div class="kids-img">
@@ -118,17 +114,15 @@
                 </div>
                 </section>
 
-            <!-- Courses Highlight -->
             <section class="courses-highlight" data-aos="fade-up">
                 <h2 data-aos="fade-right">Courses</h2>
                 <div class="course-buttons" data-aos="zoom-in">
-                    <button class="btn-course" data-level="beginner"><a href="courses.html">Beginner</a></button>
-                    <button class="btn-course" data-level="intermediate"><a href="courses.html">Intermediate</a></button>
-                    <button class="btn-course" data-level="advanced"><a href="courses.html">Advanced</a></button>
+                    <button class="btn-course" data-level="beginner">Beginner</button>
+                    <button class="btn-course" data-level="intermediate">Intermediate</button>
+                    <button class="btn-course" data-level="advanced">Advanced</button>
                 </div>
             </section>
 
-            <!-- FAQ -->
             <section class="faq" data-aos="fade-up">
                 <h2>Have any questions?</h2>
                 <div class="faq-columns" data-aos="fade-left">
@@ -146,7 +140,6 @@
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="footer" data-aos="fade-up">
             <div class="footer-container">
                 <div class="footer-left" data-aos="fade-right">
@@ -162,7 +155,6 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
         <script src="scripts/lyrics.js"></script>
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
@@ -171,9 +163,15 @@
                 once: true,
                 easing: 'ease-in-out',
             });
+
+            const menuToggle = document.getElementById("menuToggle");
+                const navLinks = document.getElementById("navLinks");
+
+                menuToggle.addEventListener("click", () => {
+                    navLinks.classList.toggle("show");
+                });
         </script>
 
-        <!-- WhatsApp button -->
         <a href="https://wa.me/41998671970" class="whatsapp-float" target="_blank" rel="noopener"
             aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>

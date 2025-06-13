@@ -21,8 +21,9 @@
                     <img src="images/lyrics-idiomas.webp" alt="Lyrics Idiomas Logo" class="logo-img" />
                 </a>
             </div>
+
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="lyrics-idiomas.html">Home</a></li>
                     <li><a href="courses.html">Courses</a></li>
                     <li><a href="enrollment.html">Enrollment</a></li>
@@ -38,18 +39,18 @@
                     <p>Choose a language and find the right level for your learning journey.</p>
                 </section>
 
-                <section class="language-selector">
+                <div id="language-selector">
                     <label for="languageSelect">Select a language:</label>
                     <select id="languageSelect">
                         <option value="english">English</option>
                         <option value="spanish">Spanish</option>
                         <option value="portuguese">Portuguese</option>
                     </select>
-                </section>
+                </div>
             </div>
 
             <section class="course-selection">
-                <!-- English Courses -->
+
                 <div class="language-group" id="english">
                     <h2>English Courses</h2>
                     <div class="course-category">
@@ -91,7 +92,6 @@
                     </div>
                 </div>
 
-                <!-- Spanish Courses -->
                 <div class="language-group" id="spanish">
                     <h2>Spanish Courses</h2>
                     <div class="course-category">
@@ -111,7 +111,6 @@
                     </div>
                 </div>
 
-                <!-- Portuguese Courses -->
                 <div class="language-group" id="portuguese">
                     <h2>Portuguese Courses</h2>
                     <div class="course-category">
@@ -133,7 +132,6 @@
             </section>
         </main>
 
-        <!-- Footer -->
         <footer class="footer" data-aos="fade-up">
             <div class="footer-container">
                 <div class="footer-left" data-aos="fade-right">
@@ -150,7 +148,6 @@
             </div>
         </footer>
         
-        <!-- Scripts -->
         <script src="scripts/lyrics.js"></script>
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
@@ -161,7 +158,6 @@
             });
         </script>
         
-        <!-- WhatsApp button -->
         <a href="https://wa.me/41998671970" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
